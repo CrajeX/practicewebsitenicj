@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Document</title>
+</head>
+<body align="center">
+    <div class="banner">
+        <!-- Add a video element for the background -->
+        <div class="video-background">
+            <video id="background-video" width="100%" height="100%" autoplay loop playsinline>
+                <source id="video-source" src="bg.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        
+        <div class="content">
+            <img src="haerin copy.jpg" alt="Haerin Image" class="movie-title"/>
+            <h4><span>HAERIN</span></h4>
+        </div>
+        <div class="carousel-box">
+            <div class="carousel">
+                <div class="carousel-item">
+                    <img src="haerin.jpeg" alt="Haerin" id="hae"/>
+                </div>
+                <div class="carousel-item">
+                    <img src="hanni.jpeg" alt="Hanni" id="han"/>
+                </div>
+                <div class="carousel-item">
+                    <img src="minji.jpeg" alt="Minji" id="min"/>
+                </div>
+                <div class="carousel-item">
+                    <img src="hyein.jpeg" alt="Hyein" id="hye"/>
+                </div>
+                <div class="carousel-item">
+                    <img src="dani.jpeg" alt="Dani" id="dan"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="video-container">
+        <video id="background-video" autoplay muted loop>
+            <source src="" type="video/mp4"> <!-- Default empty video source -->
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.carousel').carousel();
+        });
+    </script>
+    <script src="script.js"></script>
+
+</body>
+</html>

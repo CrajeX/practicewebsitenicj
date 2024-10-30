@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #ff3700;
+}
+
+body {
+    overflow: hidden;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url('haerin.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 20px; /* Adjusted padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.content h4 {
+    margin-top: -100px;
+    font-size: 500px;
+    color: white;
+}
+
+.banner::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.content {
+    position: relative;
+    max-width: 550px;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.content.active {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.movie-title {
+    max-width: 250px;
+}
+
+.banner .content h4 {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 400;
+    font-size: 50px;
+}
+
+.banner .content h4 span {
+    padding: 0;
+}
+
+.banner .carousel-box {
+    position: relative;
+    width: 80%; /* Adjust width for smaller carousel */
+    max-width: 600px; /* Adjust max-width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5); /* Adjust shadow */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-top: 30%; /* Adjusted margin */
+}
+
+.carousel {
+    position: relative;
+    height: 500px; /* Reduced height */
+    width: 100%;
+}
+
+.carousel .carousel-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel .carousel-item img {
+    max-width:200%; /* Adjusted max-width */
+    height:150%;
+    border-radius: 10px;
+    object-fit: cover;
+    transform: translateX(1px) translateY(-50px);
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.video-background #video-source {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+}
+
+@media (max-width: 899px) {
+    .banner .carousel-box {
+        width: 100%;
+        height: 300px;
+        max-width: 500px; /* Adjust max-width */
+        margin-top: 85%;
+    }
+
+    .carousel {
+        height: 0px; /* Further reduced height */
+    }
+
+    .carousel .carousel-item img {
+        max-width: 100%; /* Adjusted max-width */
+    }
+    .video-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: auto;
+        height: auto;
+        margin-top: 15%;
+        pointer-events: none;
+}
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url('haerin.jpg');
+    background-position-y: 30px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 0 20px; /* Adjusted padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+}
+@media (min-width: 900px) and (max-width: 1000px) {
+    .banner .carousel-box {
+        width: 100%;
+        height: 300px;
+        max-width: 500px; /* Adjust max-width */
+        margin-top: 50%;
+    }
+
+    .carousel {
+        height: 0px; /* Further reduced height */
+    }
+
+    .carousel .carousel-item img {
+        max-width: 100%; /* Adjusted max-width */
+    }
+}
